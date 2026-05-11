@@ -1,0 +1,1 @@
+# adamspaini-local_manifest.xml
