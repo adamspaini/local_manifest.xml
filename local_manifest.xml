@@ -55,8 +55,14 @@
            revision="lineage-23.2" />
 
   <project path="vendor/xiaomi/rodin"
-           name="ram-unlock/vendor_xiaomi_rodin"
+           name="ram-unlok/vendor_xiaomi_rodin"
            remote="gitlab" />
+
+  <!-- Llaves de firma (template) -->
+  <project path="vendor/infinity-priv/keys"
+           name="ProjectInfinity-X/vendor_infinity-priv_keys-template"
+           remote="fork"
+           revision="main" />
 
   
   <project path="vendor/xiaomi/miuicamera-rodin"
