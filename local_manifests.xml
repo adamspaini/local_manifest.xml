@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <!--
+    ADAPTADO PARA: Xiaomi Poco X7 Pro (codename: rodin, chipset: MediaTek Dimensity 8400 Ultra / MT6899)
+    ROM: PixelOS - Android 16 QPR2 (sixteen-qpr2)
+  -->
+
+  <remote name="mt6899dev" fetch="https://github.com/xiaomi-mt6899-dev"/>
+  <remote name="fork" fetch="https://github.com/"/>
+  <remote name="gitlab" fetch="https://gitlab.com"/>
+  <remote name="digimendrodin" fetch="https://github.com/Digimend-X-Rodin"/>
+
+  <!-- removals (genéricos de PixelOS, no dependen del device) -->
+  <remove-project name="PixelOS-AOSP/android_vendor_custom"/>
+  <remove-project name="PixelOS-AOSP/android_packages_apps_DolbyAtmos"/>
+  <remove-project name="PixelOS-AOSP/android_frameworks_av"/>
+  <remove-project name="PixelOS-AOSP/android_packages_apps_Settings"/>
+  <remove-project name="PixelOS-AOSP/android_frameworks_base"/>
+
+  <!-- ===================== RODIN (Poco X7 Pro / MT6899) ===================== -->
+
+  <!-- Device Tree -->
+  <project path="device/xiaomi/rodin"
+           name="android_device_xiaomi_rodin"
+           remote="mt6899dev"
+           revision="lineage-23.2" />
+
+ 
+  <project path="device/xiaomi/rodin-kernel"
+           name="android_device_xiaomi_rodin-kernel"
+           remote="mt6899dev"
+           revision="lineage-23.2" />
+
+  <!-- Sepolicy vendor de MediaTek -->
+  <project path="device/mediatek/sepolicy_vndr"
+           name="android_device_mediatek_sepolicy_vndr"
+           remote="mt6899dev"
+           revision="lineage-23.2" />
+
+  <!-- Hardware -->
+  <project path="hardware/mediatek"
+           name="android_hardware_mediatek"
+           remote="mt6899dev"
+           revision="lineage-23.2" />
+
+  <project path="hardware/xiaomi"
+           name="android_hardware_xiaomi"
+           remote="mt6899dev"
+           revision="lineage-23.2" />
+
+  <!-- IMS (VoLTE / VoWiFi) -->
+  <project path="vendor/mediatek/ims"
+           name="android_vendor_mediatek_ims"
+           remote="mt6899dev"
+           revision="lineage-23.2" />
+
+  <project path="vendor/xiaomi/rodin"
+           name="ram-unlock/vendor_xiaomi_rodin"
+           remote="gitlab" />
+
+  
+  <project path="vendor/xiaomi/miuicamera-rodin"
+           name="android_device_xiaomi_rodin-miuicamera"
+           remote="mt6899dev"
+           revision="lineage-23.2" />
+  
+
+  <project path="packages/apps/DolbyUI"
+           name="packages_apps_DolbyUI"
+           remote="digimendrodin" />
+
+</manifest>
