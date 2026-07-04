@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 
+  <!-- Remotes -->
+  <remote name="xiaomi-mt6899-dev" fetch="https://github.com/xiaomi-mt6899-dev/" />
+  <remote name="gitlab" fetch="https://gitlab.com/" />
+  <remote name="github" fetch="https://github.com/" />
+
   <!-- Device Tree -->
   <project path="device/xiaomi/rodin"
            name="android_device_xiaomi_rodin"
            remote="xiaomi-mt6899-dev"
            revision="16.2" />
 
- 
   <project path="device/xiaomi/rodin-kernel"
            name="android_device_xiaomi_rodin-kernel"
            remote="xiaomi-mt6899-dev"
@@ -40,23 +44,20 @@
            name="ram-unlok/vendor_xiaomi_rodin"
            remote="gitlab"
            revision="TheCloverProject" />
-           
-         
+
   <project path="vendor/infinity-priv/keys"
            name="ProjectInfinity-X/vendor_infinity-priv_keys-template"
            remote="github"
            revision="QPR3" />
 
-  
   <project path="vendor/xiaomi/miuicamera-rodin"
            name="android_device_xiaomi_rodin-miuicamera"
            remote="xiaomi-mt6899-dev"
            revision="16.2" />
-  
 
   <project path="packages/apps/DolbyUI"
-           name="packages_apps_DolbyUI"
-           remote="github" 
+           name="Digimend-X-Rodin/packages_apps_DolbyUI"
+           remote="github"
            revision="Rodin" />
 
 </manifest>
